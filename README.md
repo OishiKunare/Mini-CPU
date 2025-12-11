@@ -58,3 +58,5 @@ This CPU is designed by using **Digital program**. The process starts with loadi
 | 110100 | rRAM[0x0A:0x0B] ← FAC(...) | คำนวณหา Factorial(n) โดย n คือค่าใน accA เฉพาะบิต [2:0] ดังนั้นค่าของ n จะอยู่ระหว่าง 0 - 7 เท่านั้น <br> นำผลลัพธ์ที่ได้เก็บไว้ที่ rRAM[0x0A] และ rRAM[0x0B] <br> โดยค่า most significant บิต result[15:8] เก็บที่ rRAM[0x0A] <br> โดยค่า least significant บิต result[7:0] เก็บที่ rRAM[0x0B] <br> (ในคำสั่งนี้ให้ใช้ การวนลูปผ่าน ASM ไม่อนุญาตให้ใช้ ROM) |
 | 110101 | rRAM[0x09] ← max( pRAM[accA:accB] ) | คำนวณหาค่าที่มากที่สุด ของค่าใน pRAM[7:0] (คิดเฉพาะ 8 บิตด้านขวาเท่านั้น) ตำแหน่งที่ระบุโดย accA ถึง accB <br> นำคำตอบ ที่ได้ไปเก็บที่ rRAM[0x09] ให้ใช้การเปรียบเทียบแบบ 2’s complement <br> (ในกรณีนี้โจทย์จะตั้งให้ accA <= accB เสมอ) |
 | 111111 | STOP | หยุดการทำงาน ไม่ต้องทำคำสั่งถัดไป แล้วรอสัญญาณ result |
+
+**This project was developed as part of the CEDT Final Project 2025: Digital Computer Logic (2110252)**
